@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="shortcut icon" href="/static/default/img/favicon.ico" >
+  <link rel='stylesheet' href='/static/default/css/home.css'>
+  <link rel='stylesheet' href='/static/default/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='/static/default/css/home.css'>
+
+  <script src="/static/default/js/jquery-1.11.3.min.js"></script>
+  <script src="/static/default/js/jquery-ui-1.11.1.min.js"></script>
+  <script src="/static/default/js/bootstrap.min.js"></script>
+
+  <title>Clouder-lite | Local Cloud Storage</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2" id="sidebar">
+        <div>
+          <span
+            class='sidebar-glyphs glyphicon glyphicon-upload'
+            id='toggle-upload-form-area'
+            data-toggle='tooltip'
+            title='Upload files'
+          ></span>
+          <span
+            class='sidebar-glyphs glyphicon glyphicon-plus'
+            id='toggle-add-directory-form-area'
+            data-toggle='tooltip'
+            title='Add directory'
+          ></span>
+        </div>
+      </div>
+
+      <div class="col-lg-9" id="contents">
+        <div class="row">
+          <div class="col-lg-12" id="upload-form-area">
+            <br/>
+            <h5>Select files to be uploaded:</h5>
+            <form id='upload-form' method='post' enctype='multipart/form-data'>
+              <input type='file' multiple='multiple' name='files' id='files' />
+              <input type='button' class='btn' id='upload-file-btn' value='Upload'/>
+            </form>
+            <div class="progress" id="upload-progress-div" style="border-radius:0%; display:none;">
+              <div class="progress-bar" id="upload-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                <span id="upload-status-message">0% Complete</span>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class='col-lg-12' id='add-directory-form-area'>
+            <br/>
+            <h5>Name the new directory:</h5>
+            <form id='add-directory'>
+              <input type='text' style='width:100%;'/> <br />
+              <input type='button' class='btn' value='Create' id='create-directory' style='width:100%;' />
+            </form>
+            <br />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" id="special-links">
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" id="main-area">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+var GLOBALS = {
+  tree: undefined,
+  clean: false,
+  current_parent: undefined,
+  start_node: '{{ initial_path }}'
+}
+</script>
+<script src="/static/default/js/home.js" type="text/javascript"></script>
+</html>

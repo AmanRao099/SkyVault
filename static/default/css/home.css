@@ -1,0 +1,115 @@
+body {
+
+}
+
+#sidebar {
+  border:1px solid black;
+  margin:1px;
+}
+
+/*#main-area {
+  border:1px solid black;
+  margin:1px;
+  height: 100px;
+}
+
+#contents {
+  border:1px solid black;
+  margin:1px;
+  height: 100px;
+}
+
+#special-links {
+  border:1px solid black;
+  margin:1px;
+  height: 100px;
+}*/
+
+#special-links > div > .node > .row > .downloader {
+  display: none;
+}
+
+.glyphicon-folder-open {
+  color: #FBB628;
+}
+
+.glyphicon-file {
+  color: #284510;
+}
+
+.glyphicon-home, .glyphicon-level-up {
+  color: #649390;
+}
+
+.glyphicon-download {
+  color: #3D9970;
+}
+
+.glyphicon-download:hover {
+  color: #5DC9A0;
+  cursor: pointer;
+}
+
+.glyphicon {
+  font-size: 1.4em;
+  /*margin-right: 10px;*/
+}
+
+.node {
+  border: 1px solid grey;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.node:hover {
+  cursor: pointer;
+}
+
+.node > .row > div {
+  /*border: 1px solid black;*/
+}
+
+.node > .row > .col-xs-1 {
+  text-align: center;
+}
+
+.item-name {
+  font-size: 1.2em;
+  overflow: auto;
+}
+
+#upload-file-btn {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 0%;
+  color: black;
+}
+
+.btn:hover {
+  background-color: #cccccc;
+}
+
+.sidebar-glyphs {
+  color: #3D9970;
+}
+
+.sidebar-glyphs:hover {
+  color: #5DC9A0;
+  cursor: pointer;
+}
+
+#upload-form-area {
+  display: none;
+}
+
+#add-directory-form-area {
+  display: none;
+}
